@@ -10,7 +10,6 @@ readonly scriptsdir="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 
 cd ..
 readonly cwd="$(pwd)"
-readonly source_file="${cwd}/dotenv.sh"
 [ -d ~/bin ] || mkdir -p ~/bin
 cd ~/bin
 ln -sf "${cwd}/dotenv.sh" dotenv
