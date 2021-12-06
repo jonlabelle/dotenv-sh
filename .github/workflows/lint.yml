@@ -3,17 +3,8 @@ name: lint
 on:
   push:
     branches: [main]
-
-    paths-ignore:
-      - "*.md"
-      - ".editorconfig"
-
   pull_request:
     branches: [main]
-    paths-ignore:
-      - "*.md"
-      - ".editorconfig"
-
   workflow_dispatch:
 
 jobs:
@@ -27,4 +18,4 @@ jobs:
       - name: Run Shellcheck
         uses: azohra/shell-linter@latest
         with:
-          path: "dotenv.sh"
+          path: "dotenv.sh,scripts/install.sh"
