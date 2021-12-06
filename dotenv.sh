@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-scriptname=$(basename "${0}")
-
 # Load the .env file or <arg> .env.arg
 envfile=$([ -z "$1" ] && echo ".env" || echo ".env.$1")
 
@@ -17,7 +15,7 @@ if [ -f "$envfile" ]; then
 
     unset envfile
 else
-    echo "$scriptname: $envfile: File not found" 1>&2
+    echo "dotenv: $envfile: File not found" 1>&2
     unset envfile
-    exit 1
+    return 1
 fi
