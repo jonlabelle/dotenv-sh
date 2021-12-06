@@ -16,5 +16,6 @@ if [ -f "$ENVFILE" ]; then
     unset ENVFILE
 else
     echo "$ENVFILE file not found." 1>&2
+    unset ENVFILE
     exit 1
 fi
