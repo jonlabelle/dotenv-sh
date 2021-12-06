@@ -1,6 +1,6 @@
 ## dotenv.sh
 
-[![lint](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml)
+[![lint](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml/badge.svg)](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml)
 
 Load environment variables from .env files in Bash.
 
