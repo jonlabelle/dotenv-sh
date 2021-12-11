@@ -20,13 +20,13 @@ bash scripts/install.sh
 
 ## Examples
 
-To load the dotenv file from the current directory:
+To load the `.env` file that exists in the current working directory:
 
 ```bash
 source dotenv
 ```
 
-To load a custom dotenv file called `.env.local`:
+To load a custom file called `.env.local`:
 
 ```bash
 source dotenv local
