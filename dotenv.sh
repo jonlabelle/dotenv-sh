@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+exit_code=0
+
 # Load the .env file or <arg> .env.arg
 envfile=$([ -z "$1" ] && echo ".env" || echo ".env.$1")
 
@@ -12,10 +14,11 @@ if [ -f "$envfile" ]; then
 
     # +o allexport disables this feature
     set +o allexport
-
-    unset envfile
 else
-    echo "dotenv: $envfile: File not found" 1>&2
-    unset envfile
-    return 1
+    echo "[dotenv] error : '${envfile}' file not found" 1>&2
+    exit_code=1
 fi
+
+unset envfile
+
+return $exit_code

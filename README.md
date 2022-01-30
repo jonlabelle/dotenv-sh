@@ -2,31 +2,34 @@
 
 [![lint](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml/badge.svg)](https://github.com/jonlabelle/dotenv-sh/actions/workflows/lint.yml)
 
-Load environment variables from .env files in Bash.
+> Loads variables from dotenv (`.env`) files into your environment.
+
+## Install
+
+Clone the [repository] then run the [install script] to create the symlink in
+`~/bin/dotenv`:
+
+```bash
+git clone https://github.com/jonlabelle/dotenv-sh.git
+cd dotenv-sh
+bash scripts/install.sh
+```
 
 ## Usage
 
 ```bash
-source dotenv [custom]
-```
-
-## Installation
-
-To install dotenv.sh into the current user's `~/bin` directory called `dotenv`:
-
-```bash
-bash scripts/install.sh
+source dotenv [environment]
 ```
 
 ## Examples
 
-To load the `.env` file that exists in the current working directory:
+To load variables in the `.env` file from current working directory:
 
 ```bash
 source dotenv
 ```
 
-To load a custom file called `.env.local`:
+To load variables in the `.env.local` file from current working directory:
 
 ```bash
 source dotenv local
@@ -40,3 +43,6 @@ source dotenv local
 ## License
 
 [MIT](LICENSE.txt)
+
+[repository]: https://github.com/jonlabelle/dotenv-sh.git
+[install script]: https://github.com/jonlabelle/dotenv-sh/blob/main/scripts/install.sh 
