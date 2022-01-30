@@ -6,8 +6,7 @@
 
 # shellcheck disable=2155,2164,2034,2005
 scriptsdir="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
-cd "$scriptsdir"
-cd .. || exit 1
+cd "$scriptsdir" && cd .. || exit 1
 cwd="$(pwd)"
 
 [ -d ~/bin ] || mkdir -p ~/bin
